@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "chmodr": "^1.2.0",
-    "mkdirp": "^1.0.4"
+    "mkdirp": "^1.0.4",
+    "sfdx-cli": "^7.121.8"
   }
 }
