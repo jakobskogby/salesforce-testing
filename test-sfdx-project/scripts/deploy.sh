@@ -7,10 +7,12 @@ SOURCE_PATH="$(echo $GREP_PATH | sed -e "s/ /\\\ /g")"
 
 while getopts ":u:t:" opt; do
 case $opt in
+
     u) TARGETUSERNAME=${OPTARG};;
     t) TARGETREF=${OPTARG};;
     \?)
     echo "Invalid option - $OPTARG" >&2
+    echo "testing???"
     exit;;
 esac
 done
