@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Salesforce App",
   "scripts": {
-    "setup":"nodee ./scripts/setup.js",
+    "setup": "node ./scripts/setup.js",
     "lint": "eslint **/{aura,lwc}/**",
     "test": "npm run test:unit",
     "test:unit": "sfdx-lwc-jest",
@@ -15,8 +15,8 @@
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "postinstall": "husky install",
     "precommit": "lint-staged",
-    "deploy:" : "./scripts/deploy.sh",
-    "auth:" : "./scripts/auth.sh"
+    "deploy:": "./scripts/deploy.sh",
+    "auth:": "./scripts/auth.sh"
   },
   "devDependencies": {
     "@lwc/eslint-plugin-lwc": "^1.0.1",
@@ -40,5 +40,8 @@
     "**/{aura,lwc}/**": [
       "eslint"
     ]
+  },
+  "dependencies": {
+    "chmodr": "^1.2.0"
   }
 }
