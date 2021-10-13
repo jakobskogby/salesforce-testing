@@ -57,7 +57,7 @@ TEST_REQUIRED_METADATA=(
 
 for item in "${TEST_REQUIRED_METADATA[@]}"
 do  
-    if grep -qs $iteme " ${GREP_PATH}package.xml"; then
+    if grep -qs $item " ${GREP_PATH}package.xml"; then
     TEST_REQUIRED=true
     fi
 done
