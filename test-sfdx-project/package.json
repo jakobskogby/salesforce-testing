@@ -42,6 +42,7 @@
     ]
   },
   "dependencies": {
-    "chmodr": "^1.2.0"
+    "chmodr": "^1.2.0",
+    "mkdirp": "^1.0.4"
   }
 }
