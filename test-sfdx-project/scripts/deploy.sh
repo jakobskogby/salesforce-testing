@@ -1,11 +1,11 @@
 #!/bin/bash
 
-SCRIPTPATH ="$( cd "$(dirname "$0")" > dev/null 2>&1 ; pwd -P )"
+SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 GREP_PATH=$SCRIPTPATH"/../changeset/"
 rm -rf "$GREP_PATH"
 SOURCE_PATH="$(echo $GREP_PATH | sed -e "s/ /\\\ /g")"
 
-while getops ":u:t:" opt; do
+while getopts ":u:t:" opt; do
 case $opt in
     u) TARGETUSERNAME=${OPTARG};;
     t) TARGETREF=${OPTARG};;
@@ -23,7 +23,7 @@ if [ ! $TARGETREF ]; then
 read -p $'Enter target ref:\n' TARGETREF
 fi
 
-sfdx git:package -t $TARGETREF -d "$SOURCE_PATH" --purge rm -rf {} + 
+sfdx git:package -t $TARGETREF -d "$SOURCE_PATH" --purge > /dev/null 2>&1
 
 ##### find $SOURCE_PATH/lwc -name "*__tests__*" -exec rm -rf {} +
 
