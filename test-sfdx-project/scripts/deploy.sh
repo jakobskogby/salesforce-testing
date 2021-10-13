@@ -15,6 +15,8 @@ case $opt in
 esac
 done
 
+
+
 if [ ! $TARGETUSERNAME ]; then
 read -p $'Enter target username:\n' TARGETUSERNAME
 fi

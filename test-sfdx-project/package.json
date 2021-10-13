@@ -5,6 +5,7 @@
   "description": "Salesforce App",
   "scripts": {
     "setup": "node ./scripts/setup.js",
+    "deploy": "./scripts/deploy.sh",
     "lint": "eslint **/{aura,lwc}/**",
     "test": "npm run test:unit",
     "test:unit": "sfdx-lwc-jest",
@@ -15,7 +16,6 @@
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "postinstall": "husky install",
     "precommit": "lint-staged",
-    "deploy": "./scripts/deploy.sh",
     "auth": "./scripts/auth.sh"
   },
   "devDependencies": {
@@ -43,7 +43,9 @@
   },
   "dependencies": {
     "chmodr": "^1.2.0",
+    "getopts": "^2.3.0",
     "mkdirp": "^1.0.4",
-    "sfdx-cli": "^7.121.8"
+    "sfdx-cli": "^7.121.8",
+    "npm": "^6.14.8"
   }
 }
